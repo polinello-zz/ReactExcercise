@@ -23,14 +23,8 @@ function SearchForm() {
                     })
                     setSearchedShows(shows)
                 },
-                // Nota: è importante gestire gli errori qui
-                // invece di un blocco catch() in modo da non fare passare
-                // eccezioni da bug reali nei componenti.
                 (error) => {
-                    this.setState({
-                        isLoaded: true,
-                        error
-                    });
+                    console.log(error)
                 }
             )
     };
